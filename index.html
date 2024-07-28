@@ -9,6 +9,13 @@
         body {
             padding-top: 64px; /* Height of the fixed header */
         }
+        .slide-in-right {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .slide-in-right-active {
+            transform: translateX(0%);
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -29,13 +36,25 @@
                 </svg>
             </button>
         </div>
-        <div class="md:hidden hidden" id="mobile-menu">
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden" id="mobile-menu-backdrop"></div>
+    <div class="fixed inset-y-0 right-0 bg-white w-64 p-4 shadow-lg z-30 slide-in-right hidden" id="mobile-menu">
+        <div class="flex justify-end">
+            <button class="text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800" id="close-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="mt-4">
             <a href="#home" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">Home</a>
             <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">About</a>
             <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">Services</a>
             <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">Contact</a>
-        </div>
-    </header>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
@@ -106,9 +125,25 @@
     <script>
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
 
         menuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('slide-in-right-active');
+            mobileMenuBackdrop.classList.toggle('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('slide-in-right-active');
+            mobileMenuBackdrop.classList.toggle('hidden');
+        });
+
+        mobileMenuBackdrop.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('slide-in-right-active');
+            mobileMenuBackdrop.classList.toggle('hidden');
         });
     </script>
 </body>
