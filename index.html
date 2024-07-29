@@ -25,51 +25,67 @@
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <!-- Brand Name -->
             <a href="#" class="text-2xl font-bold text-gray-800">BrandName</a>
-            <!-- Search and Location Fields (visible only on large screens) -->
-            <div class="hidden md:flex flex-1 justify-center space-x-4">
-                <div class="relative">
-                    <input type="text" placeholder="Search" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 pl-10">
-                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0l6 6"></path>
+            <!-- Add Listing Button and Login Icon (visible on small screens) -->
+            <div class="md:hidden flex items-center space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4a2 2 0 002-2V4a2 2 0 00-2-2zM5 20h14a2 2 0 002-2V10H3v8a2 2 0 002 2z"></path>
                     </svg>
+                </a>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500">Add Listing</button>
+                <button class="md:hidden text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800" id="menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Search and Location Fields, Add Listing Button and Login Icon (visible only on large screens) -->
+            <div class="hidden md:flex flex-1 items-center justify-between">
+                <!-- Search and Location Fields -->
+                <div class="hidden md:flex flex-1 justify-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 pl-10">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0l6 6"></path>
+                        </svg>
+                    </div>
+                    <div class="relative">
+                        <input type="text" placeholder="Location" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 pl-10">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 10h12M6 6h12M6 14h6m6 0h6"></path>
+                        </svg>
+                    </div>
                 </div>
-                <div class="relative">
-                    <input type="text" placeholder="Location" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 pl-10">
-                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 10h12M6 6h12M6 14h6m6 0h6"></path>
-                    </svg>
+                <!-- Add Listing Button and Login Icon -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2h-4a2 2 0 00-2 2v4a2 2 0 002 2h4a2 2 0 002-2V4a2 2 0 00-2-2zM5 20h14a2 2 0 002-2V10H3v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500">Add Listing</button>
                 </div>
             </div>
-            <!-- Navigation Links (visible only on large screens) -->
-            <nav class="hidden md:flex space-x-6 ml-auto">
-                <a href="#home" class="text-gray-600 hover:text-gray-800">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-gray-800">About</a>
-                <a href="#services" class="text-gray-600 hover:text-gray-800">Services</a>
-                <a href="#contact" class="text-gray-600 hover:text-gray-800">Contact</a>
-            </nav>
-            <!-- Hamburger Button (visible only on small screens) -->
-            <button class="md:hidden text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800" id="menu-button">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
         </div>
     </header>
 
     <!-- Second-Level Header (visible only on small screens) -->
     <div class="md:hidden fixed top-16 w-full bg-white shadow-md z-10 px-4 py-4">
-        <div class="container mx-auto">
-            <div class="relative mb-4">
-                <input type="text" placeholder="Search" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 pl-10 w-full">
-                <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0l6 6"></path>
-                </svg>
-            </div>
-            <div class="relative">
-                <input type="text" placeholder="Location" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 pl-10 w-full">
-                <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 10h12M6 6h12M6 14h6m6 0h6"></path>
-                </svg>
+        <div class="container mx-auto flex flex-col items-center space-y-2">
+            <!-- Search and Location Fields -->
+            <div class="flex flex-col w-full space-y-2">
+                <div class="relative w-full">
+                    <input type="text" placeholder="Search" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 pl-10 w-full">
+                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0l6 6"></path>
+                    </svg>
+                </div>
+                <div class="relative w-full">
+                    <input type="text" placeholder="Location" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 pl-10 w-full">
+                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 10h12M6 6h12M6 14h6m6 0h6"></path>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
@@ -93,27 +109,37 @@
     </div>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
+    <main class="pt-32 px-4">
         <!-- Hero Section -->
-        <section id="home" class="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-800">Welcome to BrandName</h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-600">We provide the best services to boost your business.</p>
-            <a href="#services" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500">Learn More</a>
+        <section id="home" class="my-16 text-center">
+            <h1 class="text-4xl font-bold text-gray-800">Welcome to Our Website</h1>
+            <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tortor nec dui sagittis suscipit.</p>
+            <a href="#services" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500">Get Started</a>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-12">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-800">About Us</h2>
-                <p class="mt-4 text-gray-600">We are a team of passionate individuals dedicated to providing the best services to our clients.</p>
-            </div>
+        <section id="about" class="my-16">
+            <h2 class="text-3xl font-bold text-gray-800">About Us</h2>
+            <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tortor nec dui sagittis suscipit.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="my-16">
+            <h2 class="text-3xl font-bold text-gray-800">Our Services</h2>
+            <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tortor nec dui sagittis suscipit.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="my-16">
+            <h2 class="text-3xl font-bold text-gray-800">Contact Us</h2>
+            <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tortor nec dui sagittis suscipit.</p>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-4">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-600">&copy; 2024 BrandName. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 BrandName. All rights reserved.</p>
         </div>
     </footer>
 
